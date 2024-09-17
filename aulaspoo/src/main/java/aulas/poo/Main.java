@@ -32,11 +32,12 @@ public class Main {
             Inst.pag = input.next();
 
             System.out.println("");
-            System.out.println("O valor final é " + Inst.valorFinal());
+            Inst.valorFinal();
 
             escolhaLoop();
             
         }
+        
 
     }
     public static void escolhaLoop(){

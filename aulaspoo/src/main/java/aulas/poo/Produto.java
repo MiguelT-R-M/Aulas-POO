@@ -5,7 +5,7 @@ public class Produto {
     public double pre;
     public String pag;
     
-    public double valorFinal(){
+    public void valorFinal(){
 
         double VF = pre;
 
@@ -14,37 +14,37 @@ public class Produto {
         // 2 = cartão 2x
         // 3 = cartão 3x
 
-        if(pag.equals("0")){
+        switch(pag){
+            case("0"):
+                VF = pre*0.85;
+                System.out.println("O valor final é " + VF);
+                break;
 
-            VF = pre*0.85;
-            return VF;
+            case("1"):
+
+                VF = pre*0.9;
+                System.out.println("O valor final é " + VF);
+                break;
+
+            case("2"):
+
+                VF = pre;
+                System.out.println("O valor final é " + VF);
+                break;
+
+
+            case("3"):
+
+                VF = pre*1.1;
+                System.out.println("O valor final é " + VF);
+                break;
+
+            default:
+
+                System.out.println("Tipo de pagamento inexistente");
+                Main.valorLoop();
 
         }
-        if(pag.equals("1")){
-
-            VF = pre*0.9;
-            return VF;
-
-        }
-        if(pag.equals("2")){
-
-            VF = pre;
-            return VF;
-
-        }
-        if(pag.equals("3")){
-
-            VF = pre*1.1;
-            return VF;
-
-        }
-        else{
-
-            System.out.println("Tipo de pagamento inexistente");
-
-        }
-
-        return VF;
 
     }
 
