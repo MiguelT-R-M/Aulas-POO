@@ -39,8 +39,8 @@ public class Salario {
     
     private double SAL;
     private double vaog;
-    double aum;
-    double porc;
+    private double aum;
+    private double porc;
     
     public double getSal(){
         
