@@ -24,7 +24,7 @@ public class Corrente {
     public void sacSaldo(double saldo){
 
         saldo = saldo + (saldo/100)*0.5;
-        this.saldo = this.saldo - saldo;
+        setSaldo(getSaldo()- saldo);
         
 
     }
